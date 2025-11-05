@@ -24,7 +24,7 @@ export default function Newsletter() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center space-y-8">
           <div className="space-y-4">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">Stay Updated on Savings</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-secondary">Stay Updated on Savings</h2>
             <p className="text-lg text-gray-600">
               Get notified about the best cashback offers, exclusive deals, and money-saving tips delivered to your
               inbox weekly.
@@ -38,11 +38,11 @@ export default function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-600"
+              className="flex-1 px-4 py-3 rounded-lg border border-secondary focus:outline-none focus:ring-1"
             />
             <Button
               type="submit"
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-medium"
+              className="bg-primary hover:bg-primary text-white cursor-pointer hover:scale-105 transition-transform"
             >
               {submitted ? "Subscribed!" : "Subscribe"}
             </Button>

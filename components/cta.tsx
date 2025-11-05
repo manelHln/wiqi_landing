@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 export default function CTA() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-emerald-900">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <div className="space-y-4">
           <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
@@ -15,10 +15,10 @@ export default function CTA() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="bg-white text-emerald-900 hover:bg-gray-100">
+          <Button size="lg" className="bg-white text-primary hover:bg-gray-100 cursor-pointer">
             Get Started
           </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
+          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent cursor-pointer">
             Try for Free
           </Button>
         </div>

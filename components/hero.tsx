@@ -110,7 +110,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-200 bg-white"
           >
             <motion.div 
-              className="w-2 h-2 rounded-full bg-emerald-600"
+              className="w-2 h-2 rounded-full bg-primary"
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             ></motion.div>
@@ -124,7 +124,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-secondary leading-tight">
               Save effortlessly on every
               <br />
               online purchase
@@ -151,7 +151,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button size="lg" className="bg-emerald-700 hover:bg-emerald-800 text-white">
+              <Button size="lg" className="bg-primary hover:bg-primary text-white cursor-pointer">
                 Add to Chrome
               </Button>
             </motion.div>
@@ -162,7 +162,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-gray-300 text-gray-700 hover:bg-gray-50 bg-transparent"
+                className="border-gray-300 text-secondary cursor-pointer hover:bg-secondary hover:text-white"
               >
                 Learn More
               </Button>

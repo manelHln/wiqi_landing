@@ -89,7 +89,7 @@ export default function Stats() {
                       stiffness: 200
                     }}
                   >
-                    <p className="text-5xl sm:text-6xl font-bold text-gray-900 mb-2">
+                    <p className="text-5xl sm:text-6xl font-bold text-secondary mb-2">
                       <Counter value={stat.number} suffix={stat.suffix} />
                     </p>
                   </motion.div>

@@ -4,16 +4,15 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Clause brand colors - professional forest green palette */
   --background: oklch(0.98 0.001 0);
   --foreground: oklch(0.15 0.002 280);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.15 0.002 280);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0.002 280);
-  --primary: oklch(0.28 0.09 157); /* Forest green */
+  --primary: #3da975;
   --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.55 0.05 160); /* Muted green */
+  --secondary: #112a5c;
   --secondary-foreground: oklch(0.98 0 0);
   --muted: oklch(0.94 0.001 0);
   --muted-foreground: oklch(0.55 0 0);
@@ -47,9 +46,9 @@
   --card-foreground: oklch(0.95 0.005 0);
   --popover: oklch(0.16 0.01 220);
   --popover-foreground: oklch(0.95 0.005 0);
-  --primary: oklch(0.35 0.12 157);
+  --primary: #3da975;
   --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.4 0.08 160);
+  --secondary: #112a5c;
   --secondary-foreground: oklch(0.98 0 0);
   --muted: oklch(0.27 0 0);
   --muted-foreground: oklch(0.7 0 0);

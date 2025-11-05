@@ -8,9 +8,9 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Clause - Contract Management Platform",
+  title: "Wiqi - Save effortlessly on every online purchase",
   description:
-    "One tool to manage contracts and your team. Increase efficiency, deliver visibility, and ensure compliance.",
+    "Save effortlessly on every online purchase",
   generator: "v0.app",
 }
 

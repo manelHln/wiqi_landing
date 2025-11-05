@@ -40,7 +40,7 @@ export default function Features() {
   }
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white" id="features">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div 
@@ -63,7 +63,7 @@ export default function Features() {
             <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wider">KEY FEATURES</span>
           </motion.div>
           <motion.h2 
-            className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight"
+            className="text-4xl sm:text-5xl font-bold text-secondary leading-tight"
             variants={itemVariants}
           >
             Smart savings tools that
@@ -100,7 +100,7 @@ export default function Features() {
               <Card className="p-8 border-gray-200 shadow-sm hover:shadow-md transition-shadow bg-white h-full">
                 <div className="space-y-4">
                   <motion.h3 
-                    className="text-xl font-bold text-gray-900"
+                    className="text-xl font-bold text-secondary"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
@@ -137,7 +137,7 @@ export default function Features() {
                       >
                         <span className="text-gray-700 font-medium">{label}</span>
                         <motion.div 
-                          className="w-8 h-5 bg-emerald-600 rounded-full relative cursor-pointer"
+                          className="w-8 h-5 bg-primary rounded-full relative cursor-pointer"
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.95 }}
                         >
@@ -163,7 +163,7 @@ export default function Features() {
               <Card className="p-8 border-gray-200 shadow-sm hover:shadow-md transition-shadow bg-white h-full">
                 <div className="space-y-4">
                   <motion.h3 
-                    className="text-xl font-bold text-gray-900"
+                    className="text-xl font-bold text-secondary"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}

@@ -16,20 +16,18 @@ export default function Footer() {
     <footer className="bg-gray-950 text-white px-4 sm:px-6 lg:px-8 border-t border-gray-800">
       <div className="max-w-7xl mx-auto py-16">
         {/* Top Section */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-          {/* Logo and Contact */}
+        {/* <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">S</span>
               </div>
               <span className="font-bold text-lg text-white">Wiqi</span>
             </div>
             <p className="text-sm text-gray-400">startupsaveroo@gmail.com</p>
-            {/* <p className="text-sm text-gray-400">+1 (888) SAVE-NOW</p> */}
+            <p className="text-sm text-gray-400">+1 (888) SAVE-NOW</p>
           </div>
 
-          {/* Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
               <h4 className="font-semibold text-white mb-4 text-sm uppercase tracking-wide">{category}</h4>
@@ -44,10 +42,10 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Separator */}
-        <Separator className="bg-gray-800 my-8" />
+        {/* <Separator className="bg-gray-800 my-8" /> */}
 
         {/* Bottom Section */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">

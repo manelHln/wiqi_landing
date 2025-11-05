@@ -29,7 +29,7 @@ export default function Integrations() {
   const tripleIntegrations = [...integrations, ...integrations, ...integrations]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-emerald-900 text-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary text-white" id="integrations">
       <div className="max-w-7xl mx-auto">
         <div className="text-center space-y-12">
           <div className="space-y-4">
