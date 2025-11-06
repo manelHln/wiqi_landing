@@ -167,6 +167,14 @@ export default function Hero() {
               exclusive deals at checkout. Earn rewards while you shop without
               lifting a finger.
             </motion.p>
+          </motion.div>
+
+          <motion.div
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
             <form
               onSubmit={handleSubmit}
               className="flex mb-2 flex-col sm:flex-row gap-3 max-w-md mx-auto"
