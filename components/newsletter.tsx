@@ -5,17 +5,35 @@ import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { createClient } from '@supabase/supabase-js'
+import { set } from "react-hook-form"
 
 export default function Newsletter() {
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    setError(null)
+    setLoading(true)
     if (email) {
-      setSubmitted(true)
-      setEmail("")
-      setTimeout(() => setSubmitted(false), 3000)
+      supabase.functions.invoke("early-access", {
+        body: { email, tags: ["Early Access, Wiqi"] },
+      }).then(response => {
+        if (response.response?.ok) {
+          setSubmitted(true)
+        } else {
+          setError("Subscription failed")
+        }
+      }).catch(error => {
+        setError("An error occurred")
+      }).finally(()=> {
+        setLoading(false)
+      })
     }
   }
 
@@ -31,7 +49,7 @@ export default function Newsletter() {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <form onSubmit={handleSubmit} className="flex mb-2 flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <Input
               type="email"
               placeholder="Enter your email"
@@ -43,6 +61,7 @@ export default function Newsletter() {
             <Button
               type="submit"
               className="bg-primary hover:bg-primary text-white cursor-pointer hover:scale-105 transition-transform"
+              disabled={submitted || loading}
             >
               {submitted ? "Subscribed!" : "Subscribe"}
             </Button>
@@ -51,6 +70,11 @@ export default function Newsletter() {
           {submitted && (
             <p className="text-sm text-emerald-600 font-medium">
               Thanks for subscribing! Check your email for confirmation.
+            </p>
+          )}
+          {error && (
+            <p className="text-sm text-red-600 font-medium">
+              {error}
             </p>
           )}
         </div>
