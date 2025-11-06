@@ -17,7 +17,7 @@ export default function Home() {
       <Partners />
       <Features />
       <Integrations />
-      <Newsletter />
+      {/* <Newsletter /> */}
       <Testimonial />
       <Stats />
       <CTA />

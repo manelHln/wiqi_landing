@@ -6,7 +6,6 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { createClient } from '@supabase/supabase-js'
-import { set } from "react-hook-form"
 
 export default function Newsletter() {
   const [email, setEmail] = useState("")
@@ -69,7 +68,7 @@ export default function Newsletter() {
 
           {submitted && (
             <p className="text-sm text-emerald-600 font-medium">
-              Thanks for subscribing! Check your email for confirmation.
+              Thanks for subscribing!
             </p>
           )}
           {error && (
